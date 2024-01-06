@@ -1,10 +1,10 @@
+require("dotenv").config();
+
 const { MongoClient } = require("mongodb");
 const express = require("express");
 
 // Replace the uri string with your connection string.
-const uri =
-	"mongodb+srv://03chromeginkgo:BlJ0ipiiKeSKzode@jeopardycluster.hcdcttz.mongodb.net/?retryWrites=true&w=majority";
-
+const uri = process.env.MONGODB_URI;
 const client = new MongoClient(uri);
 
 const jeopardyData = {
